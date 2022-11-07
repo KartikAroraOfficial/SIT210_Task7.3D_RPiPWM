@@ -31,7 +31,7 @@ try:
         print(f"Distance => {distance: 1.2f} m")
         
         d.write(f"{time.asctime(time.localtime(time.time()))} Distance => {distance: 1.2f} m")
-        duty_cycle = round(1.0 - distance, 1)
+        duty_cycle = round(1.0 - distance/0.35, 1)
         if duty_cycle < 0:
             duty_cycle = 0.0
         led.value = duty_cycle
